@@ -1,0 +1,52 @@
+#palco_jogo {
+    clear:both;
+    margin-top:50px;
+    text-align:center;
+}
+
+#palco_jogo > div {
+     display:inline-block;
+}
+
+table.tab {
+    border: 0;
+}
+
+table.tab td.br {
+    border-bottom: solid 1px red;
+    border-right: solid 1px red;
+}
+
+table.tab td.r {
+    border-right: solid 1px red;
+}
+
+table.tab td.b {
+    border-bottom: solid 1px red;
+}
+
+table.tab td div {
+    width:100px;
+    height:100px;
+}
+
+#erro {
+    color : #f00;
+    font-size: medium;
+    font-weight: bold;
+}
+
+#msg.block {
+    display: block;
+    color : #00f;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.imagem_xis {
+    background-image: url('../../assets/img/marca_1.png'); 
+}
+
+.imagem_bola {
+    background-image : url('../../assets/img/marca_2.png');
+}

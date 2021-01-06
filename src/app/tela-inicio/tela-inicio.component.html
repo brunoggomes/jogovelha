@@ -1,0 +1,23 @@
+<section id="inicio" *ngIf="mostrarInicio">
+<form #f1="ngForm">
+  <p><img [src]="jogador1.imagem"></p>
+  <input type="text" name="nome_j1"
+         #n1="ngModel"
+         [(ngModel)]="jogador1.nome" required>
+
+  <p *ngIf="f1.valid">
+  <img [src]="imgIniciar" alt="Iniciar Jogo"
+       (click)="iniciarJogo()">
+  </p>
+
+  <p><img [src]="jogador2.imagem"></p>
+  <input type="text" name="nome_j2"
+         #n2="ngModel"
+         [(ngModel)]="jogador2.nome" required>
+</form>
+</section>
+
+<section id="jogo" *ngIf="!mostrarInicio">
+  <app-tela-jogo [j1]="jogador1" [j2]="jogador2">
+  </app-tela-jogo>
+</section>

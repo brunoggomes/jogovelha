@@ -1,0 +1,56 @@
+<section id="palco_jogo">
+  <div class="alert" role="alert"
+    [class.alert-success]="existeVencedor" 
+    [style.display]="existeVencedor ? 'block' : 'none'">{{mensagemVencedor}}
+  </div>
+
+<div id="msg" class="block"> </div>
+<div>
+  <img [src]="j1.imagem" />
+  <p id="ins_ap1">{{j1.nome}}</p>
+</div>
+
+<div>
+  <table class="tab" (click)="jogar($event)">
+    <tr>
+      <td class="br">
+        <div class="jogada" id="a-1" [class]="atualizarMarca('a', 1)"> </div>
+      </td>
+      <td class="br">
+        <div class="jogada" id="a-2" [class]="atualizarMarca('a', 2)"> </div>
+      </td>
+      <td class="b">
+        <div class="jogada" id="a-3" [class]="atualizarMarca('a', 3)"> </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="br">
+        <div class="jogada" id="b-1" [class]="atualizarMarca('b', 1)"> </div>
+      </td>
+      <td class="br">
+        <div class="jogada" id="b-2" [class]="atualizarMarca('b', 2)"> </div>
+      </td>
+      <td class="b">
+        <div class="jogada" id="b-3" [class]="atualizarMarca('b', 3)"> </div>
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="r">
+        <div class="jogada" id="c-1" [class]="atualizarMarca('c', 1)"> </div>
+      </td>
+      <td class="r">
+        <div class="jogada" id="c-2" [class]="atualizarMarca('c', 2)"> </div>
+      </td>
+      <td>
+        <div class="jogada" id="c-3" [class]="atualizarMarca('c', 3)"> </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <img [src]="j2.imagem">
+  <p id="ins_ap2">{{j2.nome}}</p>
+</div>
+</section>
